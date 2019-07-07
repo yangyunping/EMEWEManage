@@ -1,0 +1,33 @@
+﻿/*功能菜单字体样式*/
+.sidebar-toggler-desc {
+    float: left;
+    cursor: pointer;
+    display: block;
+    margin-left: 16px;
+    margin-top: 10px;
+    padding: 6px 8px;
+    line-height: 23px;
+    color: #eee;
+    font-size: 20px;
+    cursor: default;
+}
+
+/*隐藏功能菜单*/
+.Menu {
+    display: none !important;
+}
+
+
+
+
+.ItemDel {
+    /*display: inline-block;*/
+    width: 100px;
+    height: 40px;
+    background: gray url(../../../Skin/assets/global/img/remove-icon-small.png) no-repeat fixed 10px center;
+    /*text-indent: 35px;*/
+}
+
+
+
+ 
