@@ -41,7 +41,7 @@
 </div>--%>
 
 <%--补全人脸--%>
-<div class="modal hide" id="DivAddRole" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<%--<div class="modal hide" id="DivAddRole" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -100,7 +100,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>--%>
 <script>
     //访问用户媒体设备的兼容方法
     function getUserMedia(constraints, success, error,status) {

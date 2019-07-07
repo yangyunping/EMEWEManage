@@ -8,7 +8,7 @@
 <link href="../../../Skin/assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css" />
 <link href="../../../Skin/assets/global/css/plugins.css" rel="stylesheet" type="text/css" />
 <link href="../../../Skin/assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css" />
-<link href="../../../Skin/assets/admin/layout/css/themes/blue.css.css" rel="stylesheet" type="text/css" id="style_color" />
+<link href="../../../Skin/assets/admin/layout/css/themes/blue.css" rel="stylesheet" type="text/css" id="style_color" />
 <link href="../../../Skin/assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css" />
 <link href="../../../Skin/Common/YP.css" rel="stylesheet" />
 <link href="../../../Skin/assets/global/plugins/bootstrap-table/bootstrap-table.css" rel="stylesheet" />
