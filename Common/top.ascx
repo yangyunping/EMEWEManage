@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="top.ascx.cs" Inherits="CusStoreWeb.Common.top" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="top.ascx.cs" Inherits="EMEWEManage.Common.top" %>
 
 <div class="page-logo">
 <%--    <img src="../../../Skin/assets/admin/layout/img/logo.png" alt="logo"  />--%>

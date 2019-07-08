@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="menu.ascx.cs" Inherits="CusStoreWeb.Common.menu" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="menu.ascx.cs" Inherits="EMEWEManage.Common.menu" %>
 
 <ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" id="ul_menu" runat="server">
         <li class='sidebar-toggler-wrapper'> <div class='sidebar-toggler-desc' id='gncd'><span>功能菜单</span></div>  <div class='sidebar-toggler' id='menu'><span></span></div> </li>

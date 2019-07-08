@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace CusStoreWeb.Common {
+namespace EMEWEManage.Common {
     
     
     public partial class top {

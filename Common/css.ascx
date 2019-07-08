@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="css.ascx.cs" Inherits="CusStoreWeb.Common.css" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="css.ascx.cs" Inherits="EMEWEManage.Common.css" %>
 
 
 <link href="../../Skin/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />

@@ -1,3 +1,3 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="map.ascx.cs" Inherits="CusStoreWeb.Common.map" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="map.ascx.cs" Inherits="EMEWEManage.Common.map" %>
 
 <%=LoadNetTechMap() %>

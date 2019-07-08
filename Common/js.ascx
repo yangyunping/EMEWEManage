@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="js.ascx.cs" Inherits="CusStoreWeb.Common.js" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="js.ascx.cs" Inherits="EMEWEManage.Common.js" %>
 
 
 <script src="../../Skin/assets/global/plugins/jquery.min.js" type="text/javascript"></script>

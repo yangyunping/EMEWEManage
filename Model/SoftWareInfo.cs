@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CusStore.Model
+namespace EMEWEManage.Model
 {
     using System;
     using System.Collections.Generic;

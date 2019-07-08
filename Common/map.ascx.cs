@@ -9,7 +9,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 
-namespace CusStoreWeb.Common
+namespace EMEWEManage.Common
 {
     public partial class map : System.Web.UI.UserControl
     {

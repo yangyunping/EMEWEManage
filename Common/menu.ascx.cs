@@ -5,7 +5,7 @@ using System.Text;
 using System.Web.UI;
 
 
-namespace CusStoreWeb.Common
+namespace EMEWEManage.Common
 {
     public partial class menu : UserControl
     {

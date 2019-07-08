@@ -7,7 +7,7 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace CusStore {
+namespace EMEWEManage {
     
     
     public partial class Main {
@@ -19,7 +19,7 @@ namespace CusStore {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::CusStoreWeb.Common.top Top;
+        protected global::EMEWEManage.Common.top Top;
         
         /// <summary>
         /// Menu1 控件。
@@ -28,7 +28,7 @@ namespace CusStore {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::CusStoreWeb.Common.menu Menu1;
+        protected global::EMEWEManage.Common.menu Menu1;
         
         /// <summary>
         /// footer 控件。
@@ -37,6 +37,6 @@ namespace CusStore {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::CusStoreWeb.Common.footer footer;
+        protected global::EMEWEManage.Common.footer footer;
     }
 }

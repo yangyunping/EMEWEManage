@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace CusStore
+namespace EMEWEManage
 {
     public partial class Main : System.Web.UI.Page
     {

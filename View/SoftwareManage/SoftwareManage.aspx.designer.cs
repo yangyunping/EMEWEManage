@@ -19,7 +19,7 @@ namespace CusStore.View.SoftwareManage {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::CusStoreWeb.Common.css Css;
+        protected global::EMEWEManage.Common.css Css;
         
         /// <summary>
         /// Top 控件。
@@ -28,7 +28,7 @@ namespace CusStore.View.SoftwareManage {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::CusStoreWeb.Common.top Top;
+        protected global::EMEWEManage.Common.top Top;
         
         /// <summary>
         /// Menu1 控件。
@@ -37,7 +37,7 @@ namespace CusStore.View.SoftwareManage {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::CusStoreWeb.Common.menu Menu1;
+        protected global::EMEWEManage.Common.menu Menu1;
         
         /// <summary>
         /// footer 控件。
@@ -46,7 +46,7 @@ namespace CusStore.View.SoftwareManage {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::CusStoreWeb.Common.footer footer;
+        protected global::EMEWEManage.Common.footer footer;
         
         /// <summary>
         /// Js 控件。
@@ -55,6 +55,6 @@ namespace CusStore.View.SoftwareManage {
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::CusStoreWeb.Common.js Js;
+        protected global::EMEWEManage.Common.js Js;
     }
 }

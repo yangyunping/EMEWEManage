@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace CusStoreWeb.Common
+namespace EMEWEManage.Common
 {
     public partial class js : System.Web.UI.UserControl
     {

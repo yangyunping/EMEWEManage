@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -11,8 +12,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CusStore</RootNamespace>
-    <AssemblyName>CusStore</AssemblyName>
+    <RootNamespace>EMEWEManage</RootNamespace>
+    <AssemblyName>EMEWEManage</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -44,16 +45,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Branch\Base\Role\frmRole.aspx" />
-    <Content Include="Branch\Base\Role\frmRole.js" />
-    <Content Include="Branch\Base\User\frmUser.aspx" />
-    <Content Include="Branch\Base\User\frmUser.js" />
-    <Content Include="Branch\Store\CompanyPosition\frmCompanyPosition.aspx" />
-    <Content Include="Branch\Store\CompanyPosition\frmCompanyPosition.js" />
-    <Content Include="Branch\Store\OrgUser\frmOrgUser.aspx" />
-    <Content Include="Branch\Store\OrgUser\frmOrgUser.js" />
-    <Content Include="Branch\Store\StoreMsg\frmStoreMsg.aspx" />
-    <Content Include="Branch\Store\StoreMsg\frmStoreMsg.js" />
     <Content Include="Common\css.ascx" />
     <Content Include="Common\footer.ascx" />
     <Content Include="Common\js.ascx" />
@@ -69,27 +60,8 @@
     </Content>
     <Content Include="BLL\SoftwareManage\SoftwareManage.ashx" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\EMEWEManage.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="HQ\Base\Menu\frmMenu.aspx" />
-    <Content Include="HQ\Base\Menu\frmMenu.js" />
-    <Content Include="HQ\Base\Role\frmRole.aspx" />
-    <Content Include="HQ\Base\Role\frmRole.js" />
-    <Content Include="HQ\Base\User\frmUser.aspx" />
-    <Content Include="HQ\Base\User\frmUser.js" />
-    <Content Include="HQ\Operation\Notice\frmNotice.aspx" />
-    <Content Include="HQ\Operation\Notice\frmNotice.js" />
-    <Content Include="HQ\Operation\Register\frmRegister.aspx" />
-    <Content Include="HQ\Operation\Register\frmRegister.js" />
-    <Content Include="HQ\Organization\CompanyPosition\frmCompanyPosition.aspx" />
-    <Content Include="HQ\Organization\CompanyPosition\frmCompanyPosition.js" />
-    <Content Include="HQ\Organization\Company\frmCompany.aspx" />
-    <Content Include="HQ\Organization\Company\frmCompany.js" />
-    <Content Include="HQ\Organization\OrgUser\frmOrgUser.aspx" />
-    <Content Include="HQ\Organization\OrgUser\frmOrgUser.js" />
-    <Content Include="HQ\Organization\Site\frmSite.aspx" />
-    <Content Include="HQ\Organization\Site\frmSite.js" />
-    <Content Include="HQ\Service\Product\frmProduct.aspx" />
-    <Content Include="HQ\Service\Product\frmProduct.js" />
     <Content Include="Login.aspx" />
     <Content Include="Login.css" />
     <Content Include="Main.aspx" />
@@ -3514,7 +3486,6 @@
     <Content Include="Skin\assets\global\plugins\icheck\demo\css\montserrat-regular.svg" />
     <Content Include="Skin\assets\global\plugins\icheck\demo\css\normalize.css" />
     <Content Include="Skin\assets\global\plugins\icheck\demo\index.html" />
-    <Content Include="Skin\assets\global\plugins\icheck\demo\js\custom.js" />
     <Content Include="Skin\assets\global\plugins\icheck\demo\js\custom.min.js" />
     <Content Include="Skin\assets\global\plugins\icheck\demo\js\jquery.js" />
     <Content Include="Skin\assets\global\plugins\icheck\demo\js\zepto.js" />
@@ -4624,7 +4595,6 @@
     <Content Include="Skin\assets\global\plugins\icheck\.gitignore" />
     <Content Include="Skin\assets\global\plugins\icheck\bower.json" />
     <Content Include="Skin\assets\global\plugins\icheck\CHANGELOG.md" />
-    <Content Include="Skin\assets\global\plugins\icheck\demo\css\custom.styl" />
     <Content Include="Skin\assets\global\plugins\icheck\demo\css\montserrat-bold.eot" />
     <Content Include="Skin\assets\global\plugins\icheck\demo\css\montserrat-bold.ttf" />
     <Content Include="Skin\assets\global\plugins\icheck\demo\css\montserrat-bold.woff" />
@@ -5147,26 +5117,6 @@
     <Compile Include="BLL\SoftwareManage\SoftwareManage.ashx.cs">
       <DependentUpon>SoftwareManage.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Branch\Base\Role\frmRole.aspx.cs">
-      <DependentUpon>frmRole.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Branch\Base\User\frmUser.aspx.cs">
-      <DependentUpon>frmUser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Branch\Store\CompanyPosition\frmCompanyPosition.aspx.cs">
-      <DependentUpon>frmCompanyPosition.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Branch\Store\OrgUser\frmOrgUser.aspx.cs">
-      <DependentUpon>frmOrgUser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Branch\Store\StoreMsg\frmStoreMsg.aspx.cs">
-      <DependentUpon>frmStoreMsg.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Common\css.ascx.cs">
       <DependentUpon>css.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -5208,46 +5158,6 @@
     </Compile>
     <Compile Include="Common\top.ascx.designer.cs">
       <DependentUpon>top.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="HQ\Base\Menu\frmMenu.aspx.cs">
-      <DependentUpon>frmMenu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HQ\Base\Role\frmRole.aspx.cs">
-      <DependentUpon>frmRole.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HQ\Base\User\frmUser.aspx.cs">
-      <DependentUpon>frmUser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HQ\Operation\Notice\frmNotice.aspx.cs">
-      <DependentUpon>frmNotice.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HQ\Operation\Register\frmRegister.aspx.cs">
-      <DependentUpon>frmRegister.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HQ\Organization\CompanyPosition\frmCompanyPosition.aspx.cs">
-      <DependentUpon>frmCompanyPosition.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HQ\Organization\Company\frmCompany.aspx.cs">
-      <DependentUpon>frmCompany.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HQ\Organization\OrgUser\frmOrgUser.aspx.cs">
-      <DependentUpon>frmOrgUser.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HQ\Organization\Site\frmSite.aspx.cs">
-      <DependentUpon>frmSite.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="HQ\Service\Product\frmProduct.aspx.cs">
-      <DependentUpon>frmProduct.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -5313,10 +5223,13 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="NetTech, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\NetTech.dll</HintPath>
+      <HintPath>.\NetTech.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -5334,10 +5247,6 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="Web, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Web.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -5367,6 +5276,12 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

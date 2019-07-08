@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="CusStore.Main" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Main.aspx.cs" Inherits="EMEWEManage.Main" %>
 
 
 <%--<%@ Register Src="~/Common/css.ascx" TagPrefix="uc1" TagName="css" %>--%>
@@ -78,8 +78,8 @@
 
                 <%--查询条件区域--%>
                 <form id="searchform">
-                    <div class="form-group col-sm-12">
-                        <label for="inputPassword" class="col-sm-1 control-label" style="text-align: right">角色名称</label>
+                    <div class="form-group col-sm-6">
+                        <label for="inputPassword" class="col-sm-1 control-label" style="text-align: right">软件名称</label>
                         <div class="col-sm-11">
                             <div class="input-icon right">
                                 <input type="text" class="form-control" style="text-align: left" id="searchRoleName" name="searchRoleName"
@@ -94,7 +94,7 @@
                     <div class="col-md-12">
                         <button id="btnQuery" type="button" class="btn btn-sm yellow ">&nbsp;&nbsp;&nbsp;&nbsp;查询&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa"></i></button>
                         <button id="btnReset" type="button" class="btn btn-sm default">重置条件<i class="fa"></i></button> 
-                        <button id="btnCompanyRole" type="button" class="btn btn-sm blue">新建公司端职位<i class="fa"></i></button>
+                        <button id="btnCompanyRole" type="button" class="btn btn-sm blue">新建软件<i class="fa"></i></button>
                     </div>
                 </form>
                 <%--新建公司端角色--%>
