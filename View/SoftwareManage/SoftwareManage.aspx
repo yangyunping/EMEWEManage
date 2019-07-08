@@ -58,11 +58,11 @@
 
                 <%--查询条件区域--%>
                 <form id="searchform">
-                    <div class="form-group col-sm-12">
-                        <label for="inputPassword" class="col-sm-1 control-label" style="text-align: right">角色名称</label>
-                        <div class="col-sm-11">
-                            <div class="input-icon right">
-                                <input type="text" class="form-control" style="text-align: left" id="searchRoleName" name="searchRoleName"
+                    <div class="form-group col-sm-5">
+                        <label for="inputPassword" class="col-sm-2 control-label" style="text-align: right">软件名称</label>
+                        <div class="col-sm-6">
+                            <div class="input-icon ">
+                                <input type="text" class="form-control" style="text-align: left" id="searchName" name="searchName"
                                     placeholder="模糊搜索">
                             </div>
                         </div>
@@ -74,61 +74,65 @@
                     <div class="col-md-12">
                         <button id="btnQuery" type="button" class="btn btn-sm yellow ">&nbsp;&nbsp;&nbsp;&nbsp;查询&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa"></i></button>
                         <button id="btnReset" type="button" class="btn btn-sm default">重置条件<i class="fa"></i></button> 
-                        <button id="btnCompanyRole" type="button" class="btn btn-sm blue">新建公司端职位<i class="fa"></i></button>
+                        <button id="btnCreate" type="button" class="btn btn-sm blue">新建<i class="fa"></i></button>
                     </div>
                 </form>
-                <%--新建公司端角色--%>
-                 <div class="modal fade" id="DivAddCompanyRole" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+                <%--新建--%>
+                 <div class="modal fade" id="DivSoftInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="H3">新建公司端职位</h4>
+                                <h4 class="modal-title" id="H3">新建修改</h4>
                             </div>
                             <div class="modal-body">
-                                <form id="FormAddHQRole">
+                                <form id="FormSoftInfo">
                                     <div class="form-group">
-                                        <label for="inputPassword" style="text-align: right">公司名称</label>
-                                        <div class="input-icon right">
-                                            <select class="form-control " id="CompanyNameList" name="CompanyNameList" style="text-align: left" tabindex="-1" aria-hidden="true">
-                                                <option value="">请选择</option>
-                                            </select>
-                                        </div>
+                                        <label for="message-text" class="control-label">软件中文名称:</label>
+                                        <input class="form-control" name="SoftCHName" id="SoftCHName"/>
+                                        <input class="form-control"  name="SoftID" id="SoftID" style="display: none;"/>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="message-text" class="control-label">职位名称:</label>
-                                        <input class="form-control" name="addHQRoleName" id="addHQRoleName"/>
+                                     <div class="form-group">
+                                        <label for="message-text" class="control-label">软件英文名称:</label>
+                                        <input class="form-control" name="SoftENName" id="SoftENName"/>
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="message-text" class="control-label">数据库名称:</label>
+                                        <input class="form-control" name="SoftSqlName" id="SoftSqlName"/>
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="message-text" class="control-label">测试连接:</label>
+                                        <input class="form-control" name="TestConnect" id="TestConnect"/>
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="message-text" class="control-label">正式连接:</label>
+                                        <input class="form-control" name="NormalConnect" id="NormalConnect"/>
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="message-text" class="control-label">所在电脑名:</label>
+                                        <input class="form-control" name="ComputerID" id="ComputerID"/>
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="message-text" class="control-label">所在电脑账号:</label>
+                                        <input class="form-control" name="ComputerName" id="ComputerName"/>
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="message-text" class="control-label">源代码路径:</label>
+                                        <input class="form-control" name="CodeFilePath" id="CodeFilePath"/>
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="message-text" class="control-label">数据库路径:</label>
+                                        <input class="form-control" name="DateFilePath" id="DateFilePath"/>
+                                    </div>
+                                     <div class="form-group">
+                                        <label for="message-text" class="control-label">备注:</label>
+                                        <input class="form-control" name="Remark" id="Remark"/>
                                     </div>
                                 </form>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                                <button type="button" class="btn btn-primary" id="btnSaveAddRole">保存</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <%--编辑角色--%>
-                <div class="modal fade" id="DivEditRole" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="H1">编辑职位</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form id="FormEditRole">
-                                    <div class="form-group">
-                                        <label for="message-text" class="control-label">职位名称:</label>
-                                        <input class="form-control" name="EditRoleName" id="EditRoleName"/>
-                                        <input class="form-control" name="HideEditPID" id="HideEditPID" style="display: none;"/>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                                <button type="button" class="btn btn-primary" id="btnSaveEditRoleName">保存</button>
+                                <button type="button" class="btn btn-primary" id="btnSave">保存</button>
                             </div>
                         </div>
                     </div>
@@ -152,6 +156,7 @@
     <uc1:footer runat="server" ID="footer" />
     <uc1:js runat="server" ID="Js" />
     <script src="SoftwareManage.js?_dc=<%=Guid.NewGuid() %>"></script>
+    <script src="../../Skin/jquery/js/AjaxForm.js"></script>
 </body>
 <!-- END BODY -->
 </html>

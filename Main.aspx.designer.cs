@@ -22,13 +22,13 @@ namespace EMEWEManage {
         protected global::EMEWEManage.Common.top Top;
         
         /// <summary>
-        /// Menu1 控件。
+        /// ul_menu 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::EMEWEManage.Common.menu Menu1;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ul_menu;
         
         /// <summary>
         /// footer 控件。

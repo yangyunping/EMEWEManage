@@ -58,104 +58,29 @@
             <uc1:top runat="server" ID="Top" />
         </div>
     </div>
-    <div class="clearfix">
-    </div>
+
+
     <div class="page-container">
         <div class="page-sidebar-wrapper">
             <div class="page-sidebar navbar-collapse collapse">
 
                 <%--左边菜单--%>
-                <uc1:menu runat="server" ID="Menu1" />
+                <ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" id="ul_menu" runat="server">
+                    <li class='sidebar-toggler-wrapper'> <div class='sidebar-toggler-desc' id='gncd'><span>功能菜单</span></div>  <div class='sidebar-toggler' id='menu'><span></span></div> </li>
+                    <li class="start active open" style="margin-top: 10px;"><a href='javascript:;'><i class="icon-home"></i><span class="title">软件组</span><span class='arrow '></span><span class="selected"></span></a>
+                    <ul class="sub-menu" style="display: none;"> <li><a href="../../View/SoftwareManage/SoftwareManage.aspx"><i class="icon-control-pause"></i>软件管理</a>  </li> <li><a href="javascript:;"><i class="icon-note"></i>硬件管理</a></li></ul>
+                    </li>
+                    <li><a href='javascript:;'><i class="icon-graduation"></i><span class="title ">模具组</span><span class="arrow "></span><span class="selected"></span></a>
+                    <ul class="sub-menu" style="display: none;"> <li><a href="javascript:;"><i class="icon-control-pause"></i>模具管理</a></li> </ul>
+                    <li class="tooltips" data-container="body" data-placement="right" data-html="true" data-original-title="退出系统"><a href="javascript:;" target="_self"><i class="icon-paper-plane"></i><span class="title">退出系统</span> </a> </li>
+                    </ul>
+                <div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' style="z-index: 11050">
+                </div>
             </div>
         </div>
-
-        <div class="page-content-wrapper">
+          <div class="page-content-wrapper">
             <div class="page-content">
-
-               <%-- <%--站点地图  开始--%>
-            <%--    <uc1:map runat="server" ID="Map" />--%>
-                <%--站点地图  结束--%>
-
-                <%--查询条件区域--%>
-                <form id="searchform">
-                    <div class="form-group col-sm-6">
-                        <label for="inputPassword" class="col-sm-1 control-label" style="text-align: right">软件名称</label>
-                        <div class="col-sm-11">
-                            <div class="input-icon right">
-                                <input type="text" class="form-control" style="text-align: left" id="searchRoleName" name="searchRoleName"
-                                    placeholder="模糊搜索">
-                            </div>
-                        </div>
-                    </div>
-                </form>
-
-                <%--按钮区域--%>
-                <form id="btnMenu">
-                    <div class="col-md-12">
-                        <button id="btnQuery" type="button" class="btn btn-sm yellow ">&nbsp;&nbsp;&nbsp;&nbsp;查询&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa"></i></button>
-                        <button id="btnReset" type="button" class="btn btn-sm default">重置条件<i class="fa"></i></button> 
-                        <button id="btnCompanyRole" type="button" class="btn btn-sm blue">新建软件<i class="fa"></i></button>
-                    </div>
-                </form>
-                <%--新建公司端角色--%>
-                 <div class="modal fade" id="DivAddCompanyRole" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="H3">新建公司端职位</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form id="FormAddHQRole">
-                                    <div class="form-group">
-                                        <label for="inputPassword" style="text-align: right">公司名称</label>
-                                        <div class="input-icon right">
-                                            <select class="form-control " id="CompanyNameList" name="CompanyNameList" style="text-align: left" tabindex="-1" aria-hidden="true">
-                                                <option value="">请选择</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="message-text" class="control-label">职位名称:</label>
-                                        <input class="form-control" name="addHQRoleName" id="addHQRoleName"/>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                                <button type="button" class="btn btn-primary" id="btnSaveAddRole">保存</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <%--编辑角色--%>
-                <div class="modal fade" id="DivEditRole" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="H1">编辑职位</h4>
-                            </div>
-                            <div class="modal-body">
-                                <form id="FormEditRole">
-                                    <div class="form-group">
-                                        <label for="message-text" class="control-label">职位名称:</label>
-                                        <input class="form-control" name="EditRoleName" id="EditRoleName"/>
-                                        <input class="form-control" name="HideEditPID" id="HideEditPID" style="display: none;"/>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                                <button type="button" class="btn btn-primary" id="btnSaveEditRoleName">保存</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <%--内容区域--%>
-                <div class="row">
+                 <div class="row">
                     <div class="col-md-12">
                         <div style="height: 25px;"></div>
                         <div class="container" style="width: 101.7%; margin-top: -20px; margin-left: -15px;">
@@ -164,13 +89,13 @@
                         </div>
                     </div>
                 </div>
-                 <div class="clearfix">
                 </div>
-            </div>
-        </div>
+              </div>
     </div>
+    
+      
     <uc1:footer runat="server" ID="footer" />
-    <%--<uc1:js runat="server" ID="Js" />--%>
+
 <script src="../Skin/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
 <script src="../Skin/assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
 <script src="../Skin/assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
@@ -203,6 +128,7 @@
 <script src="../Skin/assets/global/plugins/select2/select2_locale_zh-CN.js"></script>
 <script src="Main.js?_dc=<%=Guid.NewGuid() %>"></script>
 <script src="../Skin/assets/admin/pages/scripts/form-icheck.js"></script>
+<script src="../Skin/jquery/js/AjaxForm.js"></script>
 </body>
 <!-- END BODY -->
 </html>
