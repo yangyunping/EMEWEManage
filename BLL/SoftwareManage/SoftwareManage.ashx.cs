@@ -24,7 +24,6 @@ namespace CusStore.BLL.SoftwareManage
         /// <returns></returns>
         public string AddOrModify(HttpContext context)
         {
-            Hashtable ht = new Hashtable();
             try
             {
                 SoftWareInfo softWareInfo = new SoftWareInfo();
@@ -38,9 +37,9 @@ namespace CusStore.BLL.SoftwareManage
                 softWareInfo.CodeFilePath = context.Request.Params["CodeFilePath"].ToString();
                 softWareInfo.DateFilePath = context.Request.Params["DateFilePath"].ToString();
                 softWareInfo.Remark = context.Request.Params["Remark"].ToString();
+                softWareInfo.CreateDate = DateTime.Now;
                 if (context.Request.Params["SoftID"].ToString() == "" || context.Request.Params["SoftID"] == null)
                 {
-                    softWareInfo.CreateDate = DateTime.Now;
                     using (EMEWEManageEntities db = new EMEWEManageEntities())
                     {
                         db.SoftWareInfo.Add(softWareInfo);
@@ -56,14 +55,12 @@ namespace CusStore.BLL.SoftwareManage
                         db.SaveChanges();
                     }
                 }
-                ht.Add("Msg", "OK");
+                return "OK";
             }
             catch (Exception ex)
             {
-
-                ht.Add("Msg", ex.Message);
+               return ex.Message;
             }
-            return JsonConvert.SerializeObject(new { data = ht }, Formatting.Indented);
         }
         /// <summary>
         /// 删除
@@ -124,6 +121,31 @@ namespace CusStore.BLL.SoftwareManage
             {
                 return null;
             }
+        }
+        /// <summary>
+        /// 下载生成Excel
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns></returns>
+        public void Export(HttpContext context)
+        {
+            try
+            {
+                string JsonDataNew = context.Request["JsonDataNew"];
+                NameValueCollection data = JsonHelper.GetRequest(JsonDataNew);
+                string strSearchName = data["searchName"].ToString();
+                string sSql = " select * from SoftWareInfo";
+                if (!string.IsNullOrEmpty(strSearchName))
+                {
+                    sSql += $@" NameCH LIKE '%{strSearchName}%' OR  NameEN LIKE '%{strSearchName}%'  Or NameData like '%{strSearchName}%' or ComputerName like  '%{strSearchName}%'";
+                }
+                SqlHelper broker = new SqlHelper();
+                broker.Open();
+                DataTable dt = broker.GetDataTable(sSql);
+                broker.Close();
+                Excel.OutExcelFile(context, dt, "软件信息表");
+            }
+            catch (Exception ex) { }
         }
         //public string Query(HttpContext context)
         //{

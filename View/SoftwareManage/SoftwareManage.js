@@ -7,7 +7,7 @@
 
     window.onload = function () {
         $.EmptyForm("searchform");
-        RefreshTable();
+        //RefreshTable();
     };
 
     //查询按钮
@@ -26,7 +26,15 @@
         $.EmptyForm("searchform");
     });
 
-
+    //下载模板
+    $("#btnDown").live("click", function () {
+        var obj = {
+            Url: urlStr,
+            Action: "Export",
+            FormId: "searchform"
+        };
+        $.SubmitFormOutExcelData(obj);
+    });
     //保存
     $("#btnSave").live("click", function () {
         if ($("#SoftZHName").val() === "" || $("#SoftENName").val() === "" ) {
@@ -46,11 +54,8 @@
                 data: searchform,
            
                 success: function (data) {
-                    var NewData = data.replace("<pre style=\"word-wrap: break-word; white-space: pre-wrap;\">", "");
-                       NewData = NewData.replace("</pre>", "");
-                       NewData = NewData.replace("<pre>", "");
-
-                    if (NewData === "OK") {
+                    if (data === "OK") {
+                        $.Alert("操作成功！");
                         $('#DivSoftInfo').modal('hide');
                         $.EmptyForm("FormSoftInfo");
                         //刷新表单
@@ -144,7 +149,7 @@
     //刷新数据源
     function RefreshTable() {
         var obj = {
-                SearchformID: "searchform",//查询条件ID
+            SearchformID: "searchform",//查询条件ID
             Url: urlStr,
             Action: "Query",
             RefreshTableID: "table"//数据源绑定的ID
@@ -179,14 +184,14 @@
         paginationFirstText: "第一页",
         paginationLastText: '最后一页',
         //这个接口需要处理bootstrap table传递的固定参数,并返回特定格式的json数据  
-        url: urlStr + "?Action=GetThemeInfo",
+        url: urlStr + "?Action=Query",
         //默认值为 'limit',传给服务端的参数为：limit, offset, search, sort, order Else
         //queryParamsType:'',   
         //查询参数,每次调用是会带上这个参数，可自定义                         
         queryParams: function (params) {
             return {
                 PageSize: params.limit,                         //页面大小
-                PageIndex: (params.offset / params.limit) + 1,   //页码
+                PageIndex: params.offset / params.limit + 1,   //页码
                 sort: params.sort,      //排序列名  
                 sortOrder: params.order,//, //排位命令（desc，asc）
                 JsonDataNew: BASE64.encoder($('#searchform').serialize())
@@ -198,7 +203,7 @@
         //是否显示搜索
         search: false,
         strictSearch: true,
-        idField: "ThemeID",
+        idField: "ID",
         columns: [
             {
                 checkbox: true,

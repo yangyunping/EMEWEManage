@@ -74,6 +74,7 @@
                     <div class="col-md-12">
                         <button id="btnQuery" type="button" class="btn btn-sm yellow ">&nbsp;&nbsp;&nbsp;&nbsp;查询&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa"></i></button>
                         <button id="btnReset" type="button" class="btn btn-sm default">重置条件<i class="fa"></i></button> 
+                        <button id="btnDown" type="button" class="btn btn-sm red">下载订单<i class="fa"></i></button>
                         <button id="btnCreate" type="button" class="btn btn-sm blue">新建<i class="fa"></i></button>
                     </div>
                 </form>

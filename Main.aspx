@@ -67,7 +67,7 @@
                 <%--左边菜单--%>
                 <ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" id="ul_menu" runat="server">
                     <li class='sidebar-toggler-wrapper'> <div class='sidebar-toggler-desc' id='gncd'><span>功能菜单</span></div>  <div class='sidebar-toggler' id='menu'><span></span></div> </li>
-                    <li class="start active open" style="margin-top: 10px;"><a href='javascript:;'><i class="icon-home"></i><span class="title">软件组</span><span class='arrow '></span><span class="selected"></span></a>
+                    <li style="margin-top: 10px;"><a href='javascript:;'><i class="icon-home"></i><span class="title">软件组</span><span class='arrow '></span><span class="selected"></span></a>
                     <ul class="sub-menu" style="display: none;"> <li><a href="../../View/SoftwareManage/SoftwareManage.aspx"><i class="icon-control-pause"></i>软件管理</a>  </li> <li><a href="javascript:;"><i class="icon-note"></i>硬件管理</a></li></ul>
                     </li>
                     <li><a href='javascript:;'><i class="icon-graduation"></i><span class="title ">模具组</span><span class="arrow "></span><span class="selected"></span></a>

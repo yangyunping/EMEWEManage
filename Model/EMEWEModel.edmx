@@ -4,52 +4,51 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EMEWEManageModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="EMEWEManageModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="SoftWareInfo">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NameCH" Type="nvarchar" MaxLength="50" />
-          <Property Name="NameEN" Type="nvarchar" MaxLength="50" />
-          <Property Name="NameData" Type="nchar" MaxLength="10" />
-          <Property Name="DataConnectionTest" Type="nvarchar" MaxLength="100" />
-          <Property Name="DataConnectionOnline" Type="nvarchar" MaxLength="100" />
+          <Property Name="NameCH" Type="nvarchar" MaxLength="100" />
+          <Property Name="NameEN" Type="nvarchar" MaxLength="100" />
+          <Property Name="NameData" Type="nvarchar" MaxLength="50" />
+          <Property Name="DataConnectionTest" Type="nvarchar" MaxLength="500" />
+          <Property Name="DataConnectionOnline" Type="nvarchar" MaxLength="500" />
           <Property Name="ComputerID" Type="nvarchar" MaxLength="50" />
           <Property Name="ComputerName" Type="nvarchar" MaxLength="50" />
-          <Property Name="CodeFilePath" Type="nvarchar" MaxLength="100" />
-          <Property Name="DateFilePath" Type="nvarchar" MaxLength="100" />
+          <Property Name="CodeFilePath" Type="nvarchar" MaxLength="500" />
+          <Property Name="DateFilePath" Type="nvarchar" MaxLength="500" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="Remark" Type="nvarchar" MaxLength="500" />
         </EntityType>
         <EntityContainer Name="EMEWEManageModelStoreContainer">
           <EntitySet Name="SoftWareInfo" EntityType="Self.SoftWareInfo" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EMEWEManageModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EMEWEManageEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SoftWareInfo" EntityType="EMEWEManageModel.SoftWareInfo" />
+        </EntityContainer>
         <EntityType Name="SoftWareInfo">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NameCH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NameEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="NameData" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="DataConnectionTest" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="DataConnectionOnline" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NameCH" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NameEN" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NameData" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DataConnectionTest" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DataConnectionOnline" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="ComputerID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ComputerName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CodeFilePath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="DateFilePath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CodeFilePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="DateFilePath" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="Remark" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="EMEWEManageEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="SoftWareInfo" EntityType="Self.SoftWareInfo" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -59,18 +58,18 @@
           <EntitySetMapping Name="SoftWareInfo">
             <EntityTypeMapping TypeName="EMEWEManageModel.SoftWareInfo">
               <MappingFragment StoreEntitySet="SoftWareInfo">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="NameCH" ColumnName="NameCH" />
-                <ScalarProperty Name="NameEN" ColumnName="NameEN" />
-                <ScalarProperty Name="NameData" ColumnName="NameData" />
-                <ScalarProperty Name="DataConnectionTest" ColumnName="DataConnectionTest" />
-                <ScalarProperty Name="DataConnectionOnline" ColumnName="DataConnectionOnline" />
-                <ScalarProperty Name="ComputerID" ColumnName="ComputerID" />
-                <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
-                <ScalarProperty Name="CodeFilePath" ColumnName="CodeFilePath" />
-                <ScalarProperty Name="DateFilePath" ColumnName="DateFilePath" />
-                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
                 <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="DateFilePath" ColumnName="DateFilePath" />
+                <ScalarProperty Name="CodeFilePath" ColumnName="CodeFilePath" />
+                <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+                <ScalarProperty Name="ComputerID" ColumnName="ComputerID" />
+                <ScalarProperty Name="DataConnectionOnline" ColumnName="DataConnectionOnline" />
+                <ScalarProperty Name="DataConnectionTest" ColumnName="DataConnectionTest" />
+                <ScalarProperty Name="NameData" ColumnName="NameData" />
+                <ScalarProperty Name="NameEN" ColumnName="NameEN" />
+                <ScalarProperty Name="NameCH" ColumnName="NameCH" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
